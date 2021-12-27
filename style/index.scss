@@ -136,6 +136,9 @@ body {
 	background-color: $whiteBackground;
 	@include rowInDesktopColumnInMobile;
 
+	.sameRow {
+		@include rowInDesktopColumnInMobile;
+	}
 	.form {
 		input {
 			border: 1px solid $secondaryBackgroundColor;

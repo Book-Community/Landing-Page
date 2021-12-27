@@ -5133,7 +5133,9 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #f7f5fb;
-  max-width: 100%;
+  align-items: center;
+  display: flex;
+  min-height: 50vh;
 }
 .whatIsBookCommunity .title {
   padding: 2rem 0;
@@ -5163,7 +5165,9 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #e3e1de;
-  max-width: 100%;
+  align-items: center;
+  display: flex;
+  min-height: 50vh;
 }
 .ourValues .title {
   padding: 2rem 0;
@@ -5174,9 +5178,9 @@ body {
   column-gap: 1rem;
   row-gap: 1rem;
   display: flex;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 992px) {
   .ourValues .cards {
@@ -5193,11 +5197,15 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f7f5fb;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 992px) {
+  .footer {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (min-width: 992px) {
   .footer {
@@ -5205,24 +5213,24 @@ body {
     flex-wrap: wrap;
   }
 }
-.footer .container {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 992px) {
-  .footer .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 .footer .form input {
   border: 1px solid #2f2e41;
 }
+@media (max-width: 767.98px) {
+  .footer .form {
+    max-width: 80%;
+  }
+}
 .footer .copyright {
   display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 @media (min-width: 992px) {
   .footer .copyright {
+    margin-bottom: 0;
+    text-align: left;
     align-items: center;
     justify-content: flex-start;
   }
@@ -5245,6 +5253,12 @@ body {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 767.98px) {
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .form input {
   padding: 1rem 2rem;
   border: none;
@@ -5253,7 +5267,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .form input {
-    width: 90%;
+    width: 100%;
   }
 }
 .form input:focus {
@@ -5270,7 +5284,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .form .btn-newsletter {
-    width: 90%;
+    width: 100%;
     margin-bottom: 2rem;
   }
 }

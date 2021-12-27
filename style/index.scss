@@ -18,10 +18,10 @@ $spacer: 1rem;
 html,
 body {
 	width: 100%;
-}
-body {
 	font-family: $fontFamily;
 	margin: 0;
+	//TODO this must change
+	overflow-x: hidden;
 }
 
 .heroImage {

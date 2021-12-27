@@ -4902,11 +4902,9 @@
 html,
 body {
   width: 100%;
-}
-
-body {
   font-family: "Roboto";
   margin: 0;
+  overflow-x: hidden;
 }
 
 .heroImage {

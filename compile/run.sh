@@ -1,0 +1,1 @@
+sass ../style/index.scss ../style/index.css

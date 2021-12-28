@@ -4934,6 +4934,7 @@ html ::selection {
     width: -moz-fit-content;
     width: fit-content;
     padding: 1rem;
+    border-radius: 5px;
   }
 }
 
@@ -4999,6 +5000,7 @@ html ::selection {
 .whatIsBookCommunity .cards .card {
   background-color: #e3e1de;
   padding: 1rem;
+  border-radius: 5px;
 }
 
 @media (max-width: 991.98px) {
@@ -5073,6 +5075,7 @@ html ::selection {
 .ourValues .cards .card {
   background-color: white;
   padding: 1rem;
+  border-radius: 5px;
 }
 
 @media (max-width: 991.98px) {
@@ -5228,6 +5231,7 @@ html ::selection {
   border: none;
   text-decoration: none;
   min-width: 50%;
+  border-radius: 5px;
 }
 
 @media (max-width: 767.98px) {
@@ -5249,6 +5253,7 @@ html ::selection {
   padding: 1rem;
   text-decoration: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 @media (max-width: 767.98px) {

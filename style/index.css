@@ -5284,6 +5284,9 @@ html ::selection {
 
 .cookie-banner .options {
   padding: 1rem 0;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 1rem;
 }
 
 .cookie-banner button {
@@ -5298,6 +5301,7 @@ html ::selection {
   background-color: #2f2e41;
   color: #e3e1de;
   border-radius: 5px;
+  padding: 0.75rem;
 }
 
 #newsletterProblem {

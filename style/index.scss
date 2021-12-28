@@ -195,6 +195,8 @@ html ::selection {
 
 	.options {
 		padding: $spacer 0;
+		column-gap: $spacer;
+		row-gap: $spacer;
 	}
 	button {
 		border: none;
@@ -207,6 +209,7 @@ html ::selection {
 		background-color: $secondaryBackgroundColor;
 		color: $primaryBackgroundColor;
 		@include borderRadius;
+		padding: $spacer * 0.75;
 	}
 }
 

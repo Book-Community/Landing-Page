@@ -98,6 +98,9 @@ html ::selection {
 	background-color: $secondaryBackgroundColor;
 	color: $primaryBackgroundColor;
 	min-height: 30vh;
+	.subtitle {
+		text-align: center;
+	}
 }
 
 .footer {

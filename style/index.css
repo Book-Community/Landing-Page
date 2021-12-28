@@ -5083,6 +5083,10 @@ html ::selection {
   font-size: 2rem;
 }
 
+.newsletter .subtitle {
+  text-align: center;
+}
+
 .footer {
   padding-top: 2rem;
   padding-bottom: 2rem;

@@ -186,6 +186,16 @@ html ::selection {
 		flex-direction: row;
 	}
 
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		color: $secondaryBackgroundColor;
+		border-bottom: 1px solid $secondaryBackgroundColor;
+	}
+
+	.options {
+		padding: $spacer 0;
+	}
 	button {
 		border: none;
 		padding: $spacer * 0.5;
@@ -216,5 +226,14 @@ html ::selection {
 		margin-right: auto;
 		cursor: pointer;
 		@include borderRadius;
+	}
+}
+
+@keyframes cookieHide {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }

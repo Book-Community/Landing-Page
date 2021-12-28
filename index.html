@@ -440,7 +440,11 @@ if(localStorage.getItem('cookieSeen') != 'shown'){
 }
 
 function closeCookieBanner(){
-	cookieBanner.style.display = "none";
+	cookieBanner.style.animation = "cookieHide 1s";
+	setTimeout(()=>{
+		cookieBanner.style.display = "none";
+	}, 1000)
+	
 }
 
 function acceptCookies(){

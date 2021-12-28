@@ -5275,6 +5275,17 @@ html ::selection {
   }
 }
 
+.cookie-banner a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2f2e41;
+  border-bottom: 1px solid #2f2e41;
+}
+
+.cookie-banner .options {
+  padding: 1rem 0;
+}
+
 .cookie-banner button {
   border: none;
   padding: 0.5rem;
@@ -5315,5 +5326,23 @@ html ::selection {
   margin-right: auto;
   cursor: pointer;
   border-radius: 5px;
+}
+
+@-webkit-keyframes cookieHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes cookieHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

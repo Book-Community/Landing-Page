@@ -37,6 +37,9 @@ html ::selection {
 		.textSection {
 			.box {
 				width: fit-content;
+				@include media-breakpoint-down(lg) {
+					padding: 0 $spacer/2;
+				}
 				h1 {
 					font-weight: lighter;
 					font-size: 3rem;

@@ -5175,12 +5175,13 @@ html ::selection {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-bottom: 1rem;
   }
 }
 
-.footer .copyright span {
-  margin-bottom: 1rem;
+@media (max-width: 991.98px) {
+  .footer .copyright span {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer .me {

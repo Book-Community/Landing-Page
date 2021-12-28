@@ -136,11 +136,11 @@ html ::selection {
 			text-align: left;
 			justify-content: flex-start;
 			align-self: center;
-			margin-bottom: $spacer;
 		}
-
-		span {
-			margin-bottom: $spacer;
+		@include media-breakpoint-down(lg) {
+			span {
+				margin-bottom: $spacer;
+			}
 		}
 	}
 	.me {

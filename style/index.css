@@ -5159,7 +5159,6 @@ html ::selection {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  margin-bottom: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5173,6 +5172,10 @@ html ::selection {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 1rem;
   }
 }
 
@@ -5180,7 +5183,7 @@ html ::selection {
   margin-bottom: 1rem;
 }
 
-.footer .socialMedia {
+.footer .me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5191,14 +5194,32 @@ html ::selection {
           justify-content: center;
 }
 
-.footer .socialMedia svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #2f2e41;
+.footer .me a {
+  text-decoration: none;
+  color: #2f2e41;
+  border-radius: 5px;
+  border: 1px solid #2f2e41;
+  padding: 1rem;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.footer .me a span {
+  color: red;
 }
 
 @media (min-width: 992px) {
-  .footer .socialMedia {
+  .footer .me a:hover {
+    background-color: #2f2e41;
+    color: #e3e1de;
+  }
+  .footer .me a:hover span {
+    color: red;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .me {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

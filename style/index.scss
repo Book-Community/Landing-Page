@@ -129,26 +129,43 @@ html ::selection {
 	.copyright {
 		display: flex;
 		text-align: center;
-		margin-bottom: $spacer;
+
 		flex-direction: column;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 			text-align: left;
 			justify-content: flex-start;
+			align-self: center;
+			margin-bottom: $spacer;
 		}
 
 		span {
 			margin-bottom: $spacer;
 		}
 	}
-	.socialMedia {
+	.me {
 		display: flex;
 		column-gap: $spacer;
 		justify-content: center;
-		svg {
-			width: 2rem;
-			height: 2rem;
-			fill: $secondaryBackgroundColor;
+		a {
+			text-decoration: none;
+			color: $secondaryBackgroundColor;
+			@include borderRadius;
+			border: 1px solid $secondaryBackgroundColor;
+			padding: $spacer;
+			transition: background-color 0.2s ease-in-out;
+			span {
+				color: red;
+			}
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: $secondaryBackgroundColor;
+					color: $primaryBackgroundColor;
+					span {
+						color: red;
+					}
+				}
+			}
 		}
 		@include media-breakpoint-up(lg) {
 			display: flex;

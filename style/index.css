@@ -4870,6 +4870,18 @@ body {
   overflow-x: hidden;
 }
 
+body ::-moz-selection,
+html ::-moz-selection {
+  color: #e3e1de;
+  background: #2f2e41;
+}
+
+body ::selection,
+html ::selection {
+  color: #e3e1de;
+  background: #2f2e41;
+}
+
 .heroImage {
   background-color: #e3e1de;
   padding-top: 2rem;
@@ -4916,6 +4928,12 @@ body {
 @media (min-width: 768px) {
   .heroImage .content h1 {
     text-align: left;
+    background-color: #2f2e41;
+    color: #e3e1de;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem;
   }
 }
 
@@ -5215,6 +5233,7 @@ body {
 @media (max-width: 767.98px) {
   .form input {
     width: 100%;
+    margin-bottom: 1rem;
   }
 }
 

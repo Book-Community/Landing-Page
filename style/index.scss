@@ -23,6 +23,17 @@ body {
 	overflow-x: hidden;
 }
 
+body ::-moz-selection,
+html ::-moz-selection {
+	color: $primaryBackgroundColor;
+	background: $secondaryBackgroundColor;
+}
+body ::selection,
+html ::selection {
+	color: $primaryBackgroundColor;
+	background: $secondaryBackgroundColor;
+}
+
 .heroImage {
 	background-color: $primaryBackgroundColor;
 	padding-top: $spacer * 2;
@@ -42,6 +53,10 @@ body {
 			text-align: center;
 			@include media-breakpoint-up(md) {
 				text-align: left;
+				background-color: $secondaryBackgroundColor;
+				color: $primaryBackgroundColor;
+				width: fit-content;
+				padding: $spacer;
 			}
 		}
 		.subtitle {
@@ -191,6 +206,7 @@ body {
 		min-width: 50%;
 		@include media-breakpoint-down(md) {
 			width: 100%;
+			margin-bottom: $spacer;
 		}
 	}
 	input:focus {

@@ -1,23 +1,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
-
-$primaryBackgroundColor: #e3e1de;
-$secondaryBackgroundColor: #2f2e41;
-$whiteBackground: #f7f5fb;
-$fontFamily: "Roboto";
-$spacer: 1rem;
-
-@mixin rowInDesktopColumnInMobile {
-	display: flex;
-	flex-direction: column;
-	@include media-breakpoint-up(lg) {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-}
-
-@mixin borderRadius {
-	border-radius: 5px;
-}
+@import "./mixins.scss";
+@import "./common.scss";
+@import "./variables.scss";
 
 html,
 body {
@@ -41,16 +25,14 @@ html ::selection {
 
 .heroImage {
 	background-color: $primaryBackgroundColor;
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
+	@include section;
 	min-height: 75vh;
-	display: flex;
-	align-items: center;
 
 	.content {
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
+		align-items: center;
 		@include rowInDesktopColumnInMobile;
 		.textSection {
 			.box {
@@ -59,7 +41,7 @@ html ::selection {
 					font-weight: lighter;
 					font-size: 3rem;
 					text-align: center;
-					@include media-breakpoint-up(md) {
+					@include media-breakpoint-up(lg) {
 						text-align: left;
 						background-color: $secondaryBackgroundColor;
 						color: $primaryBackgroundColor;
@@ -70,7 +52,7 @@ html ::selection {
 				}
 				.subtitle {
 					text-align: center;
-					@include media-breakpoint-up(md) {
+					@include media-breakpoint-up(lg) {
 						text-align: left;
 					}
 					font-weight: 300;
@@ -81,33 +63,8 @@ html ::selection {
 }
 
 .whatIsBookCommunity {
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
+	@include section;
 	background-color: $whiteBackground;
-	align-items: center;
-	display: flex;
-	min-height: 50vh;
-	.title {
-		padding: $spacer * 2 0;
-		text-align: center;
-		font-size: 2rem;
-	}
-	.cards {
-		column-gap: $spacer;
-		row-gap: $spacer;
-		display: flex;
-		justify-content: center;
-		@include rowInDesktopColumnInMobile;
-		.card {
-			background-color: $primaryBackgroundColor;
-			padding: $spacer;
-			@include borderRadius;
-			@include media-breakpoint-down(lg) {
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-	}
 }
 .text {
 	text-align: center;
@@ -122,55 +79,24 @@ html ::selection {
 }
 
 .ourValues {
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
+	@include section;
 	background-color: $primaryBackgroundColor;
-	align-items: center;
-	display: flex;
-	min-height: 50vh;
 
-	.title {
-		padding: $spacer * 2 0;
-		text-align: center;
-		font-size: 2rem;
-	}
 	.cards {
-		column-gap: $spacer;
-		row-gap: $spacer;
-		display: flex;
-
-		@include rowInDesktopColumnInMobile;
-		justify-content: center;
-
 		.card {
 			background-color: white;
-			padding: $spacer;
-			@include borderRadius;
-			@include media-breakpoint-down(lg) {
-				margin-left: auto;
-				margin-right: auto;
-			}
 		}
 	}
 }
 .newsletter {
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
+	@include section;
 	background-color: $secondaryBackgroundColor;
 	color: $primaryBackgroundColor;
-	align-items: center;
-	display: flex;
 	min-height: 30vh;
-	.title {
-		padding: $spacer * 2 0;
-		text-align: center;
-		font-size: 2rem;
-	}
 }
 
 .footer {
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
+	@include sameSpaceSection;
 	display: flex;
 
 	@include media-breakpoint-up(lg) {

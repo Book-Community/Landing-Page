@@ -1,0 +1,19 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.cards {
+	column-gap: $spacer;
+	row-gap: $spacer;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.card {
+		background-color: $primaryBackgroundColor;
+		padding: $spacer;
+		@include borderRadius;
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

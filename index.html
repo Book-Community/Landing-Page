@@ -44,7 +44,7 @@
 						Ένα ψηφιακό μέρος επικοινωνίας μέσα από τα βιβλία.
 					</div>
 					<form class="form">
-							<iframe src="https://bookcommunitygr.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+							<iframe  frameborder="0" scrolling="no"></iframe>
 					</form>
 				</div>
 				</div>
@@ -376,9 +376,11 @@
 				<div class="title">
 					Κάνε εγγραφή στο newsletter μας για να μάθεις περισσότερα.
 				</div>
+				<p id="newsletterProblem" style="text-align: center; display: none;">Αποδεχτείτε τα cookies για να κάνετε εγγραφή στο newsletter</p>
 				<form class="form">
-					<iframe src="https://bookcommunitygr.substack.com/embed" frameborder="0" scrolling="no"></iframe>
-			</form>
+					<iframe frameborder="0" scrolling="no"></iframe>
+				</form>
+			
 			</div>
 			
 		</section>
@@ -406,10 +408,45 @@
 		</div>
 	</div>
 </section>
-
+<div class="cookie-banner" style="display: none;">
+	<p>
+		Χρησιμοποιούμε cookies για την υπηρεσία του newsletter και στατιστικά στοιχεία, για περισσότερα διάβασε την 
+    <a href=’#’>πολιτική απορρήτου</a>
+  </p>
+  <div class="options">
+	<button class="decline" onclick="closeCookieBanner()">Απόρριψη</button>
+	<button class="accept" onclick="acceptCookies()">Αποδοχή</button>
+  </div>
+  
+</div>
 <script>
 var date  = new Date;
 document.getElementById("copyright").innerHTML = "&copy; all right reserved " + date.getFullYear();
+var cookieBanner = document.querySelector(".cookie-banner");
+var decline = document.querySelector(".decline");
+var accept = document.querySelector(".accept");
+var iframes = document.querySelectorAll("iframe");
+var newsletterProblem= document.querySelector("#newsletterProblem");
+
+if(localStorage.getItem('cookieSeen') != 'shown'){
+	cookieBanner.style.display = "flex";
+	newsletterProblem.style.display="block";
+}else{
+	acceptCookies();
+}
+
+function closeCookieBanner(){
+	cookieBanner.style.display = "none";
+}
+
+function acceptCookies(){
+	closeCookieBanner();
+	newsletterProblem.style.display="none";
+	localStorage.setItem('cookieSeen','shown');
+	iframes.forEach((el)=>{
+		el.src = "https://bookcommunitygr.substack.com/embed"
+	})
+}
 </script>
 	</body>
 </html>

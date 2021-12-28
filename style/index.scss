@@ -163,3 +163,39 @@ html ::selection {
 		justify-content: flex-start;
 	}
 }
+
+.cookie-banner {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: $spacer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $primaryBackgroundColor;
+	border-radius: 5px;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+	@include media-breakpoint-up(lg) {
+		bottom: 40px;
+		left: 10%;
+		right: 10%;
+		width: 80%;
+		padding: 5px 14px;
+		flex-direction: row;
+	}
+
+	button {
+		border: none;
+		padding: $spacer/2;
+		background-color: inherit;
+		cursor: pointer;
+	}
+	.accept {
+		font-size: 1rem;
+		background-color: $secondaryBackgroundColor;
+		color: $primaryBackgroundColor;
+		border-radius: 5px;
+	}
+}

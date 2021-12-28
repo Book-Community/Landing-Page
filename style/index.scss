@@ -212,6 +212,7 @@ html ::selection {
 		border: none;
 		text-decoration: none;
 		min-width: 50%;
+		border: 1px solid $primaryBackgroundColor;
 		@include borderRadius;
 		@include media-breakpoint-down(md) {
 			width: 100%;

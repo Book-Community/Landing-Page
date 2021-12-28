@@ -5231,6 +5231,7 @@ html ::selection {
   border: none;
   text-decoration: none;
   min-width: 50%;
+  border: 1px solid #e3e1de;
   border-radius: 5px;
 }
 

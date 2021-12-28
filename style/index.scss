@@ -110,6 +110,7 @@ html ::selection {
 	margin-bottom: $spacer;
 	@include media-breakpoint-up(lg) {
 		text-align: left;
+		margin-bottom: $spacer * 2;
 	}
 	p {
 		font-weight: 300;

@@ -245,3 +245,13 @@ html ::selection {
 		opacity: 0;
 	}
 }
+
+.quoteCnt {
+	@include section;
+	background-color: $secondaryBackgroundColor;
+	color: $primaryBackgroundColor;
+	min-height: 30vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}

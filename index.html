@@ -376,7 +376,11 @@
 				<div class="title">
 					Κάνε εγγραφή στο newsletter μας για να μάθεις περισσότερα.
 				</div>
-				<p id="newsletterProblem" style="text-align: center; display: none;">Αποδεχτείτε τα cookies για να κάνετε εγγραφή στο newsletter</p>
+				
+				<div id="newsletterProblem" style="display: none;">
+					<p  style="text-align: center;">Αποδεχτείτε τα cookies για να κάνετε εγγραφή στο newsletter</p>
+					<button class="btnCookie" onclick="acceptCookies()">Αποδοχή cookies</button>
+				</div>
 				<form class="form">
 					<iframe frameborder="0" scrolling="no"></iframe>
 				</form>
@@ -430,7 +434,7 @@ var newsletterProblem= document.querySelector("#newsletterProblem");
 
 if(localStorage.getItem('cookieSeen') != 'shown'){
 	cookieBanner.style.display = "flex";
-	newsletterProblem.style.display="block";
+	newsletterProblem.style.display="flex";
 }else{
 	acceptCookies();
 }

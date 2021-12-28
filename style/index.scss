@@ -174,7 +174,7 @@ html ::selection {
 	align-items: center;
 	justify-content: space-between;
 	background-color: $primaryBackgroundColor;
-	border-radius: 5px;
+	@include borderRadius;
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 
 	@include media-breakpoint-up(lg) {
@@ -188,7 +188,7 @@ html ::selection {
 
 	button {
 		border: none;
-		padding: $spacer/2;
+		padding: $spacer * 0.5;
 		background-color: inherit;
 		cursor: pointer;
 	}
@@ -196,6 +196,25 @@ html ::selection {
 		font-size: 1rem;
 		background-color: $secondaryBackgroundColor;
 		color: $primaryBackgroundColor;
-		border-radius: 5px;
+		@include borderRadius;
+	}
+}
+
+#newsletterProblem {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	.btnCookie {
+		background-color: $primaryBackgroundColor;
+		border: none;
+		color: $secondaryBackgroundColor;
+		padding: $spacer;
+		text-decoration: none;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+		@include borderRadius;
 	}
 }

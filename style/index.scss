@@ -143,34 +143,30 @@ html ::selection {
 			}
 		}
 	}
-	.me {
+	.icons {
 		display: flex;
 		column-gap: $spacer;
 		justify-content: center;
-		a {
-			text-decoration: none;
-			color: $secondaryBackgroundColor;
-			@include borderRadius;
-			border: 1px solid $secondaryBackgroundColor;
-			padding: $spacer;
-			transition: background-color 0.2s ease-in-out;
-			span {
-				color: red;
-			}
-			@include media-breakpoint-up(lg) {
-				&:hover {
-					background-color: $secondaryBackgroundColor;
-					color: $primaryBackgroundColor;
-					span {
-						color: red;
-					}
-				}
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		.icon {
+			svg {
+				width: 2rem;
+				height: 2rem;
+				transition: fill 0.2s ease-in-out;
 			}
 		}
 		@include media-breakpoint-up(lg) {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+
+			.icon:hover {
+				svg {
+					fill: #ff6b00;
+				}
+			}
 		}
 	}
 }

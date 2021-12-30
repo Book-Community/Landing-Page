@@ -5184,7 +5184,7 @@ html ::selection {
   }
 }
 
-.footer .me {
+.footer .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5193,34 +5193,23 @@ html ::selection {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.footer .me a {
-  text-decoration: none;
-  color: #2f2e41;
-  border-radius: 5px;
-  border: 1px solid #2f2e41;
-  padding: 1rem;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.footer .me a span {
-  color: red;
-}
-
-@media (min-width: 992px) {
-  .footer .me a:hover {
-    background-color: #2f2e41;
-    color: #e3e1de;
-  }
-  .footer .me a:hover span {
-    color: red;
-  }
+.footer .icons .icon svg {
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
 }
 
 @media (min-width: 992px) {
-  .footer .me {
+  .footer .icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5230,6 +5219,9 @@ html ::selection {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  .footer .icons .icon:hover svg {
+    fill: #ff6b00;
   }
 }
 

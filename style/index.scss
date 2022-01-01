@@ -38,7 +38,7 @@ html ::selection {
 			.box {
 				width: fit-content;
 				@include media-breakpoint-down(lg) {
-					padding: 0 $spacer/2;
+					padding: 0 $spacer * 0.5;
 				}
 				h1 {
 					font-weight: lighter;
@@ -186,22 +186,30 @@ html ::selection {
 }
 
 .clickNewsletterCnt {
-	margin: $spacer * 2 0;
+	margin: $spacer * 2 auto;
+	display: flex;
+	justify-content: center;
+
+	@include media-breakpoint-up(lg) {
+		margin: $spacer * 2 0;
+		justify-content: flex-start;
+	}
 	a {
 		text-decoration: none;
 	}
 	.clickNewsletter {
 		text-decoration: none;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		border: 1px solid $secondaryBackgroundColor;
 		color: $secondaryBackgroundColor;
 		width: fit-content;
-
+		@include borderRadius;
 		padding: $spacer;
 		cursor: pointer;
 		transition: background-color 0.2s ease-in-out;
 
 		@include media-breakpoint-up(lg) {
+			font-size: 1.5rem;
 			&:hover {
 				background-color: $secondaryBackgroundColor;
 				color: $primaryBackgroundColor;

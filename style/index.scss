@@ -185,6 +185,31 @@ html ::selection {
 	}
 }
 
+.clickNewsletterCnt {
+	margin: $spacer * 2 0;
+	a {
+		text-decoration: none;
+	}
+	.clickNewsletter {
+		text-decoration: none;
+		font-size: 1.5rem;
+		border: 1px solid $secondaryBackgroundColor;
+		color: $secondaryBackgroundColor;
+		width: fit-content;
+
+		padding: $spacer;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				background-color: $secondaryBackgroundColor;
+				color: $primaryBackgroundColor;
+			}
+		}
+	}
+}
+
 .cookie-banner {
 	position: fixed;
 	bottom: 0;

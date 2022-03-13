@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=common.css.map */
+/* Error: Undefined mixin.
+ *    ,
+ * 14 | /         @include media-breakpoint-down(lg) {
+ * 15 | |             margin-left: auto;
+ * 16 | |             margin-right: auto;
+ * 17 | \         }
+ *    '
+ *   ../style/common.scss 14:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 14 \2502  \250c          @include media-breakpoint-down(lg) {\a 15 \2502  \2502              margin-left: auto;\a 16 \2502  \2502              margin-right: auto;\a 17 \2502  \2514          }\a    \2575 \a   ../style/common.scss 14:3  root stylesheet";
+}

@@ -5004,6 +5004,8 @@ article .content .titleLink {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: 0.2s ease-in-out background-color;
+  transition: 0.2s ease-in-out background-color;
 }
 
 @media (max-width: 991.98px) {
@@ -5021,8 +5023,6 @@ article .content .description {
   article .content .titleLink:hover {
     color: #2f2e41;
     background-color: #e3e1de;
-    -webkit-transition: 0.2s ease-in-out color;
-    transition: 0.2s ease-in-out color;
   }
 }
 /*# sourceMappingURL=blog.css.map */

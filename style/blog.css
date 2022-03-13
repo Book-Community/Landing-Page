@@ -4950,6 +4950,13 @@ article .imgCnt {
   aspect-ratio: 1.6;
 }
 
+@media (max-width: 991.98px) {
+  article .imgCnt {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 article .imgCnt img {
   position: absolute;
   width: 100%;
@@ -4957,13 +4964,6 @@ article .imgCnt img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
-}
-
-@media (max-width: 991.98px) {
-  article .imgCnt img {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 article .content {

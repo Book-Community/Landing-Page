@@ -40,6 +40,10 @@ article {
 		height: 190px;
 		position: relative;
 		aspect-ratio: 1.6;
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		img {
 			position: absolute;
@@ -47,10 +51,6 @@ article {
 			height: 100%;
 			object-fit: cover;
 			@include borderRadius;
-			@include media-breakpoint-down(lg) {
-				margin-left: auto;
-				margin-right: auto;
-			}
 		}
 	}
 

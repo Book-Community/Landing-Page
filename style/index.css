@@ -5087,12 +5087,74 @@ html ::selection {
   background: #2f2e41;
 }
 
+.heroImage {
+  background-color: #e3e1de;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  min-height: 50vh;
+  min-height: 75vh;
+}
+.heroImage .title {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.heroImage .content {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .heroImage .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.heroImage .content .textSection .box {
+  width: fit-content;
+}
+@media (max-width: 991.98px) {
+  .heroImage .content .textSection .box {
+    padding: 0 0.5rem;
+  }
+}
+.heroImage .content .textSection .box h1 {
+  font-weight: lighter;
+  font-size: 3rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .heroImage .content .textSection .box h1 {
+    text-align: left;
+    background-color: #2f2e41;
+    color: #e3e1de;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+.heroImage .content .textSection .box .subtitle {
+  text-align: center;
+  font-weight: 300;
+}
+@media (min-width: 992px) {
+  .heroImage .content .textSection .box .subtitle {
+    text-align: left;
+  }
+}
+
 .whatIsBookCommunity {
   padding-top: 2rem;
   padding-bottom: 2rem;
   align-items: center;
   display: flex;
-  background-color: #f7f5fb;
+  min-height: 50vh;
+  background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
 .whatIsBookCommunity .title {
   padding: 2rem 0;
@@ -5121,6 +5183,7 @@ html ::selection {
   padding-bottom: 2rem;
   align-items: center;
   display: flex;
+  min-height: 50vh;
   background-color: #e3e1de;
 }
 .ourValues .title {
@@ -5137,6 +5200,7 @@ html ::selection {
   padding-bottom: 2rem;
   align-items: center;
   display: flex;
+  min-height: 50vh;
   background-color: #2f2e41;
   color: #e3e1de;
   min-height: 30vh;
@@ -5251,6 +5315,41 @@ html ::selection {
   justify-content: flex-start;
 }
 
+.clickNewsletterCnt {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .clickNewsletterCnt {
+    margin: 2rem 0;
+    justify-content: flex-start;
+  }
+}
+.clickNewsletterCnt a {
+  text-decoration: none;
+}
+.clickNewsletterCnt .clickNewsletter {
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid #2f2e41;
+  color: #2f2e41;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+@media (min-width: 992px) {
+  .clickNewsletterCnt .clickNewsletter {
+    font-size: 1.5rem;
+  }
+  .clickNewsletterCnt .clickNewsletter:hover {
+    background-color: #2f2e41;
+    color: #e3e1de;
+  }
+}
+
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -5330,6 +5429,7 @@ html ::selection {
   padding-bottom: 2rem;
   align-items: center;
   display: flex;
+  min-height: 50vh;
   background-color: #2f2e41;
   color: #e3e1de;
   min-height: 30vh;

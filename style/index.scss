@@ -25,7 +25,7 @@ html ::selection {
 
 .whatIsBookCommunity {
 	@include section;
-	background-color: $whiteBackground;
+	background: linear-gradient(180deg,  $primaryBackgroundColor 0%, $whiteBackground 50%);
 }
 .text {
 	text-align: center;

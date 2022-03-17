@@ -96,7 +96,7 @@
 	.navLink{
 		@include borderRadius;
 		border: 1px solid $secondaryBackgroundColor;
-		padding: $spacer/2;
+		padding: $spacer * 0.5;
 		background-color: $secondaryBackgroundColor;
 		color: $primaryBackgroundColor;
 	}

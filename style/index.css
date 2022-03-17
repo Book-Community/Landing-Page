@@ -5154,7 +5154,7 @@ html ::selection {
   align-items: center;
   display: flex;
   min-height: 50vh;
-  background-color: #f7f5fb;
+  background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
 .whatIsBookCommunity .title {
   padding: 2rem 0;

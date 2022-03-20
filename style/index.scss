@@ -319,7 +319,7 @@ html ::selection {
 
 	.bookCover {
 		width: 100%;
-		padding: $spacer;
+		padding: $spacer * 2;
 		color: $primaryBackgroundColor;
 		text-align: center;
 		display: flex;

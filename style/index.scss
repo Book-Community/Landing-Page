@@ -329,9 +329,8 @@ html ::selection {
 		aspect-ratio: 0.6; //ratio of a4
 		box-shadow: 17px 15px 53px -10px rgba(0, 0, 0, 0.6);
 		user-select: none;
-
-		@include media-breakpoint-up(lg) {
-			padding: $spacer * 3 $spacer * 4 $spacer * 2 $spacer * 4;
+		@include media-breakpoint-up(xl) {
+			padding: $spacer * 3 $spacer * 4 $spacer * 3 $spacer * 4;
 		}
 		h1 {
 			font-weight: normal;
@@ -339,7 +338,7 @@ html ::selection {
 			padding: 0;
 		}
 		.book-title {
-			font-size: 2rem;
+			font-size: 2.5rem;
 			margin-bottom: $spacer;
 			@include bookFonts;
 			@include media-breakpoint-up(lg) {

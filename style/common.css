@@ -5058,6 +5058,7 @@
 .cards .card {
   background-color: #e3e1de;
   padding: 1rem;
+  user-select: none;
   border-radius: 5px;
 }
 @media (max-width: 991.98px) {

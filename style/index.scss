@@ -96,6 +96,7 @@ html ::selection {
 
 	.cards {
 		.card {
+			user-select: none;
 			background-color: white;
 		}
 	}

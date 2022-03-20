@@ -1,4 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 @import "./mixins.scss";
 @import "./common.scss";
 @import "./variables.scss";
@@ -34,15 +33,18 @@ html ::selection {
 		margin-right: auto;
 		align-items: center;
 		@include rowInDesktopColumnInMobile;
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
+		}
 		.textSection {
 			.box {
 				width: fit-content;
 				@include media-breakpoint-down(lg) {
 					padding: 0 $spacer * 0.5;
 				}
-				h1 {
+				.title {
 					font-weight: lighter;
-					font-size: 3rem;
+					font-size: 2rem;
 					text-align: center;
 					@include media-breakpoint-up(lg) {
 						text-align: left;
@@ -55,6 +57,7 @@ html ::selection {
 				}
 				.subtitle {
 					text-align: center;
+					line-height: 3px;
 					@include media-breakpoint-up(lg) {
 						text-align: left;
 					}
@@ -67,7 +70,11 @@ html ::selection {
 
 .whatIsBookCommunity {
 	@include section;
-	background: linear-gradient(180deg,  $primaryBackgroundColor 0%, $whiteBackground 50%);
+	background: linear-gradient(
+		180deg,
+		$primaryBackgroundColor 0%,
+		$whiteBackground 50%
+	);
 }
 .text {
 	text-align: center;
@@ -303,4 +310,78 @@ html ::selection {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.bookCoverCnt {
+	display: flex;
+	justify-content: center;
+
+	.bookCover {
+		width: 100%;
+		padding: $spacer;
+		color: #e5e5e5;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #635642;
+		aspect-ratio: 0.6; //ratio of a4
+		box-shadow: 17px 15px 53px -10px rgba(0, 0, 0, 0.6);
+		user-select: none;
+
+		@include media-breakpoint-up(lg) {
+			padding: $spacer * 3 $spacer * 4 $spacer * 2 $spacer * 4;
+		}
+		h1 {
+			font-weight: normal;
+			margin: 0;
+			padding: 0;
+		}
+		.book-title {
+			font-size: 2rem;
+			margin-bottom: $spacer;
+			@include bookFonts;
+			@include media-breakpoint-up(lg) {
+				font-size: 3rem;
+			}
+		}
+		.book-subtitle {
+			font-size: 0.8rem;
+			margin-bottom: $spacer;
+			@include bookFonts;
+			@include media-breakpoint-up(lg) {
+				font-size: 1rem;
+			}
+		}
+		.authors {
+			font-size: 0.8rem;
+			margin-bottom: $spacer;
+			@include bookFonts;
+			@include media-breakpoint-up(lg) {
+				font-size: 1rem;
+			}
+		}
+		.book-oldPenSvg {
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: $spacer;
+
+			@include media-breakpoint-up(lg) {
+				width: 80%;
+			}
+		}
+		.end {
+			display: flex;
+			flex-direction: column;
+			align-self: flex-end;
+		}
+		.copyright {
+			font-size: 0.8rem;
+			@include bookFonts;
+			@include media-breakpoint-up(lg) {
+				font-size: 1rem;
+			}
+		}
+	}
 }

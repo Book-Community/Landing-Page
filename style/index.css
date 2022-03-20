@@ -10507,7 +10507,7 @@ html ::selection {
 .bookCoverCnt .bookCover {
   width: 100%;
   padding: 1rem;
-  color: #e5e5e5;
+  color: #e3e1de;
   text-align: center;
   display: flex;
   flex-direction: column;

@@ -46,12 +46,16 @@ html ::selection {
 					font-weight: lighter;
 					font-size: 2rem;
 					text-align: center;
-					padding: $spacer;
+					@include media-breakpoint-down(lg){
+						margin-bottom: $spacer;
+						padding: 0;
+					}
 					@include media-breakpoint-up(lg) {
 						text-align: left;
 						background-color: $secondaryBackgroundColor;
 						color: $primaryBackgroundColor;
 						width: fit-content;
+						padding: $spacer;
 						@include borderRadius;
 					}
 				}
@@ -194,7 +198,7 @@ html ::selection {
 }
 
 .clickNewsletterCnt {
-	margin: $spacer auto;
+	margin-bottom: $spacer;
 	display: flex;
 	justify-content: center;
 

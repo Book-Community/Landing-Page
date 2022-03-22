@@ -5054,6 +5054,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
 }
 .cards .card {
   background-color: #e3e1de;

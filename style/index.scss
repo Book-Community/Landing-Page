@@ -80,6 +80,17 @@ html ::selection {
 		$whiteBackground 50%
 	);
 }
+.whatMakesBookCommunityDifferent{
+	@include section;
+	background: $primaryBackgroundColor;
+	.cards{
+		margin: $spacer 0;
+		.card{
+			user-select: none;
+			background-color: white;
+		}
+	}
+}
 .text {
 	text-align: center;
 	margin-bottom: $spacer;
@@ -92,18 +103,18 @@ html ::selection {
 		line-height: 1.5;
 		font-size: 1.1rem;
 	}
+
+	.author{
+		text-align: right;
+		font-weight: 300;
+		line-height: 1.5;
+		font-size: 1.1rem;
+	}
 }
 
-.ourValues {
+.ourStory {
 	@include section;
-	background-color: $primaryBackgroundColor;
-
-	.cards {
-		.card {
-			user-select: none;
-			background-color: white;
-		}
-	}
+	background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
 .newsletter {
 	@include section;

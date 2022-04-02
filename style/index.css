@@ -10103,6 +10103,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
 }
 .cards .card {
   background-color: #e3e1de;
@@ -10146,8 +10147,13 @@ html ::selection {
   min-height: 50vh;
   min-height: 75vh;
 }
+@media (min-width: 992px) {
+  .heroImage {
+    min-height: 35vh;
+  }
+}
 .heroImage .title {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-size: 2rem;
 }
@@ -10218,10 +10224,41 @@ html ::selection {
   min-height: 50vh;
   background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
+@media (min-width: 992px) {
+  .whatIsBookCommunity {
+    min-height: 35vh;
+  }
+}
 .whatIsBookCommunity .title {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-size: 2rem;
+}
+
+.whatMakesBookCommunityDifferent {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  min-height: 50vh;
+  background: #e3e1de;
+}
+@media (min-width: 992px) {
+  .whatMakesBookCommunityDifferent {
+    min-height: 35vh;
+  }
+}
+.whatMakesBookCommunityDifferent .title {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.whatMakesBookCommunityDifferent .cards {
+  margin: 1rem 0;
+}
+.whatMakesBookCommunityDifferent .cards .card {
+  user-select: none;
+  background-color: white;
 }
 
 .text {
@@ -10239,23 +10276,35 @@ html ::selection {
   line-height: 1.5;
   font-size: 1.1rem;
 }
+.text .author {
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+@media (min-width: 992px) {
+  .text .author {
+    text-align: right;
+  }
+}
 
-.ourValues {
+.ourStory {
   padding-top: 2rem;
   padding-bottom: 2rem;
   align-items: center;
   display: flex;
   min-height: 50vh;
-  background-color: #e3e1de;
+  background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
-.ourValues .title {
-  padding: 2rem 0;
+@media (min-width: 992px) {
+  .ourStory {
+    min-height: 35vh;
+  }
+}
+.ourStory .title {
+  padding: 1rem 0;
   text-align: center;
   font-size: 2rem;
-}
-.ourValues .cards .card {
-  user-select: none;
-  background-color: white;
 }
 
 .newsletter {
@@ -10268,8 +10317,13 @@ html ::selection {
   color: #e3e1de;
   min-height: 30vh;
 }
+@media (min-width: 992px) {
+  .newsletter {
+    min-height: 35vh;
+  }
+}
 .newsletter .title {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-size: 2rem;
 }
@@ -10500,8 +10554,13 @@ html ::selection {
   justify-content: center;
   flex-direction: column;
 }
+@media (min-width: 992px) {
+  .quoteCnt {
+    min-height: 35vh;
+  }
+}
 .quoteCnt .title {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-size: 2rem;
 }

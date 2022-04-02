@@ -22,9 +22,12 @@
 	align-items: center;
 	display: flex;
 	min-height: 50vh;
+	@include media-breakpoint-up(lg){
+		min-height: 35vh;
+	}
 
 	.title {
-		padding: $spacer * 2 0;
+		padding: $spacer 0;
 		text-align: center;
 		font-size: 2rem;
 	}

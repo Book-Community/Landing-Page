@@ -16,6 +16,7 @@ html ::-moz-selection {
 	color: $primaryBackgroundColor;
 	background: $secondaryBackgroundColor;
 }
+
 body ::selection,
 html ::selection {
 	color: $primaryBackgroundColor;
@@ -27,44 +28,80 @@ html ::selection {
 	@include section;
 	min-height: 75vh;
 
+	@include media-breakpoint-down(lg) {
+		padding-top: $spacer;
+		min-height: 60vh;
+	}
+
 	.content {
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
 		align-items: center;
 		@include rowInDesktopColumnInMobile;
+
 		@include media-breakpoint-up(lg) {
 			justify-content: space-between;
 		}
+
 		.textSection {
 			.box {
 				width: fit-content;
+
 				@include media-breakpoint-down(lg) {
 					padding: 0 $spacer * 0.5;
+					width: 100%;
 				}
-				.title {
-					font-weight: lighter;
-					font-size: 2rem;
-					text-align: center;
-					@include media-breakpoint-down(lg){
-						margin-bottom: $spacer;
-						padding: 0;
+
+				.logo {
+					font-family: 'Cardo';
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					color: #635642;
+
+					@include media-breakpoint-down(lg) {
+						justify-content: center;
+						margin-bottom: $spacer *2;
 					}
-					@include media-breakpoint-up(lg) {
-						text-align: left;
-						background-color: $secondaryBackgroundColor;
-						color: $primaryBackgroundColor;
-						width: fit-content;
-						padding: $spacer;
-						@include borderRadius;
+
+					.img-container {
+						svg {
+							height: 4.5rem;
+
+							@include media-breakpoint-up(lg) {
+								height: 9rem;
+							}
+						}
+					}
+
+					.text-logo {
+						display: flex;
+						flex-direction: column;
+						font-size: 1.5rem;
+
+						@include media-breakpoint-up(lg) {
+							font-size: 2.5rem;
+						}
 					}
 				}
+
+				.clickNewsletterCnt {
+					@include media-breakpoint-down(lg) {
+						display: none;
+					}
+				}
+
+
+
 				.subtitle {
 					text-align: center;
 					line-height: 3px;
+
 					@include media-breakpoint-up(lg) {
 						text-align: left;
 					}
+
 					font-weight: 300;
 				}
 			}
@@ -74,42 +111,38 @@ html ::selection {
 
 .whatIsBookCommunity {
 	@include section;
-	background: linear-gradient(
-		180deg,
-		$primaryBackgroundColor 0%,
-		$whiteBackground 50%
-	);
+	background: linear-gradient(180deg,
+			$primaryBackgroundColor 0%,
+			$whiteBackground 50%);
 }
-.whatMakesBookCommunityDifferent{
+
+.whatMakesBookCommunityDifferent {
 	@include section;
 	background: $primaryBackgroundColor;
-	.cards{
-		margin: $spacer 0;
-		.card{
-			user-select: none;
-			background-color: white;
-		}
-	}
 }
+
 .text {
 	text-align: center;
 	margin-bottom: $spacer;
+
 	@include media-breakpoint-up(lg) {
 		text-align: left;
 		margin-bottom: $spacer * 2;
 	}
+
 	p {
 		font-weight: 300;
 		line-height: 1.5;
 		font-size: 1.1rem;
 	}
 
-	.author{
+	.author {
 		text-align: center;
 		font-weight: 300;
 		line-height: 1.5;
 		font-size: 1.1rem;
-		@include media-breakpoint-up(lg){
+
+		@include media-breakpoint-up(lg) {
 			text-align: right;
 		}
 	}
@@ -119,11 +152,13 @@ html ::selection {
 	@include section;
 	background: linear-gradient(180deg, #e3e1de 0%, #f7f5fb 50%);
 }
+
 .newsletter {
 	@include section;
 	background-color: $secondaryBackgroundColor;
 	color: $primaryBackgroundColor;
 	min-height: 30vh;
+
 	.subtitle {
 		text-align: center;
 	}
@@ -144,31 +179,37 @@ html ::selection {
 	.sameRow {
 		@include rowInDesktopColumnInMobile;
 	}
+
 	.form {
 		input {
 			border: 1px solid $secondaryBackgroundColor;
 		}
+
 		@include media-breakpoint-down(md) {
 			max-width: 80%;
 		}
 	}
+
 	.copyright {
 		display: flex;
 		text-align: center;
 
 		flex-direction: column;
+
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 			text-align: left;
 			justify-content: flex-start;
 			align-self: center;
 		}
+
 		@include media-breakpoint-down(lg) {
 			span {
 				margin-bottom: $spacer;
 			}
 		}
 	}
+
 	.icons {
 		display: flex;
 		column-gap: $spacer;
@@ -183,6 +224,7 @@ html ::selection {
 				transition: fill 0.2s ease-in-out;
 			}
 		}
+
 		@include media-breakpoint-up(lg) {
 			display: flex;
 			align-items: center;
@@ -199,6 +241,7 @@ html ::selection {
 
 .form {
 	@include rowInDesktopColumnInMobile;
+
 	@include media-breakpoint-down(md) {
 		margin-left: auto;
 		margin-right: auto;
@@ -220,9 +263,11 @@ html ::selection {
 		margin: $spacer * 2 0;
 		justify-content: flex-start;
 	}
+
 	a {
 		text-decoration: none;
 	}
+
 	.clickNewsletter {
 		text-decoration: none;
 		font-size: 1rem;
@@ -236,6 +281,7 @@ html ::selection {
 
 		@include media-breakpoint-up(lg) {
 			font-size: 1.5rem;
+
 			&:hover {
 				background-color: $secondaryBackgroundColor;
 				color: $primaryBackgroundColor;
@@ -278,12 +324,14 @@ html ::selection {
 		column-gap: $spacer;
 		row-gap: $spacer;
 	}
+
 	button {
 		border: none;
 		padding: $spacer * 0.5;
 		background-color: inherit;
 		cursor: pointer;
 	}
+
 	.accept {
 		font-size: 1rem;
 		background-color: $secondaryBackgroundColor;
@@ -316,6 +364,7 @@ html ::selection {
 	from {
 		opacity: 1;
 	}
+
 	to {
 		opacity: 0;
 	}
@@ -335,6 +384,7 @@ html ::selection {
 	display: flex;
 	justify-content: center;
 
+
 	.bookCover {
 		width: 100%;
 		padding: $spacer * 2;
@@ -347,38 +397,47 @@ html ::selection {
 		aspect-ratio: 0.6; //ratio of a4
 		box-shadow: 17px 15px 53px -10px rgba(0, 0, 0, 0.6);
 		user-select: none;
+
 		@include media-breakpoint-up(xl) {
 			padding: $spacer * 3 $spacer * 4 $spacer * 3 $spacer * 4;
 		}
+
 		h1 {
 			font-weight: normal;
 			margin: 0;
 			padding: 0;
 		}
+
 		.book-title {
 			font-size: 2.5rem;
 			margin-bottom: $spacer;
 			@include bookFonts;
+
 			@include media-breakpoint-up(lg) {
 				font-size: 3rem;
 			}
 		}
+
 		.book-subtitle {
 			font-size: 0.8rem;
 			margin-bottom: $spacer;
 			@include bookFonts;
+
 			@include media-breakpoint-up(lg) {
 				font-size: 1rem;
 			}
 		}
+
 		.authors {
 			font-size: 0.8rem;
 			margin-bottom: $spacer;
 			@include bookFonts;
+
 			@include media-breakpoint-up(lg) {
 				font-size: 1rem;
 			}
 		}
+
 		.book-oldPenSvg {
 			width: 60%;
 			margin-left: auto;
@@ -389,15 +448,18 @@ html ::selection {
 				width: 80%;
 			}
 		}
+
 		.end {
 			display: flex;
 			flex-direction: column;
 			align-self: flex-end;
 			margin: 0 auto;
 		}
+
 		.copyright {
 			font-size: 0.8rem;
 			@include bookFonts;
+
 			@include media-breakpoint-up(lg) {
 				font-size: 1rem;
 			}
